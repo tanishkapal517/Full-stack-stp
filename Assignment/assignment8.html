@@ -1,0 +1,80 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Form</title>
+</head>
+<body style="background-color: lightgreen; font-family: Arial;">
+
+  <center>
+    <form style="background-color: lime; width: 500px; padding: 30px; border: 2px solid black;">
+      <h2>USER FORM</h2>
+
+      <ul style="list-style-type: disc; text-align: left;">
+
+        <li>
+          <label for="fname">FIRST NAME</label><br>
+          <input type="text" id="fname" name="fname"><br><br>
+        </li>
+
+        <li>
+          <label for="password">PASSWORD</label><br>
+          <input type="password" id="password" name="password"><br><br>
+        </li>
+
+        <li>
+          GENDER<br>
+          <input type="radio" name="gender" value="male"> Male
+          <input type="radio" name="gender" value="female"> Female<br><br>
+        </li>
+
+        <li>
+          <label for="address">ADDRESS</label><br>
+          <textarea id="address" name="address" rows="4" cols="30"></textarea><br><br>
+        </li>
+
+        <li>
+          D.O.B<br>
+          <select name="dob_month">
+            <option>Jan</option>
+            <option>Feb</option>
+            <option>Mar</option>
+            <!-- Add more months -->
+          </select>
+          <select name="dob_day">
+            <option>1</option>
+            <option>2</option>
+            <!-- Add more days -->
+          </select>
+          <select name="dob_year">
+            <option>1990</option>
+            <option>1991</option>
+            <!-- Add more years -->
+          </select><br><br>
+        </li>
+
+        <li>
+          SELECT GAMES<br>
+          <input type="checkbox" name="game" value="hockey"> Hockey
+          <input type="checkbox" name="game" value="football"> Football
+          <input type="checkbox" name="game" value="cricket"> Cricket
+          <input type="checkbox" name="game" value="volleyball"> Volleyball<br><br>
+        </li>
+
+        <li>
+          MARITAL STATUS<br>
+          <input type="radio" name="status" value="married"> Married
+          <input type="radio" name="status" value="unmarried"> Unmarried<br><br>
+        </li>
+
+      </ul>
+
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset"><br><br>
+
+      <input type="checkbox" name="agree"> I accept this agreement
+    </form>
+  </center>
+
+</body>
+</html>

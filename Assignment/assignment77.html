@@ -1,0 +1,74 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+</head>
+<body>
+  <h2>Sign Up</h2>
+  <form>
+    <label for="fname">First Name</label><br>
+    <input type="text" id="fname" name="fname" placeholder="Enter First Name"><br><br>
+
+    <label for="lname">Last Name</label><br>
+    <input type="text" id="lname" name="lname" placeholder="Enter Last Name"><br><br>
+
+    <label>Date of Birth</label><br>
+    <select name="dob_day">
+      <option value="">Date</option>
+      <!-- Example dates -->
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <!-- Add 3–31 similarly -->
+    </select>
+
+    <select name="dob_month">
+      <option value="">Month</option>
+      <option value="1">January</option>
+      <option value="2">February</option>
+      <!-- Add all months -->
+    </select>
+
+    <select name="dob_year">
+      <option value="">Year</option>
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+      <!-- Add more years -->
+    </select>
+    <br><br>
+
+    <label>Gender</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <br><br>
+
+    <label for="country">Country</label><br>
+    <select id="country" name="country">
+      <option value="">Country</option>
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <!-- Add more countries -->
+    </select><br><br>
+
+    <label for="email">E-mail</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter E-mail"><br><br>
+
+    <label for="phone">Phone</label><br>
+    <input type="tel" id="phone" name="phone" placeholder="Enter Phone"><br><br>
+
+    <label for="password">Password</label><br>
+    <input type="password" id="password" name="password"><br><br>
+
+    <label for="confirmPassword">Confirm Password</label><br>
+    <input type="password" id="confirmPassword" name="confirmPassword"><br><br>
+
+    <input type="checkbox" id="terms" name="terms">
+    <label for="terms">I agree to the Terms of use</label><br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Cancel">
+  </form>
+</body>
+</html>
