@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PHP Assignments</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    form, .task {
+      background: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input[type="text"], input[type="number"] {
+      padding: 5px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>PHP Assignments</h2>
+
+<!-- Task 1–4: Cube, Table, Factorial, Prime Check -->
+<div class="task">
+  <form method="post">
+    <label>Enter a Number:</label>
+    <input type="number" name="number">
+    <input type="submit" name="cube" value="Cube">
+    <input type="submit" name="table" value="Table">
+    <input type="submit" name="fact" value="Factorial">
+    <input type="submit" name="prime" value="Check Prime">
+  </form>
+  <?php
+    if (isset($_POST['number'])) {
+      $n = $_POST['number'];
+      if (isset($_POST['cube'])) echo "Cube: " . ($n*$n*$n);
+      elseif (isset($_POST['table'])) {
+        echo "<br>Table:<br>";
+        for ($i = 1; $i <= 10; $i++) echo "$n x $i = " . ($n*$i) . "<br>";
+      }
+      elseif (isset($_POST['fact'])) {
+        $fact = 1;
+        for ($i = 1; $i <= $n; $i++) $fact *= $i;
+        echo "Factorial: $fact";
+      }
+      elseif (isset($_POST['prime'])) {
+        $prime = $n > 1;
+        for ($i = 2; $i <= sqrt($n); $i++) if ($n % $i == 0) $prime = false;
+        echo $prime ? "It is a Prime Number" : "Not a Prime Number";
+      }
+    }
+  ?>
+</div>
+
+<!-- Task 5: Total Marks and Percentage -->
+<div class="task">
+  <form method="post">
+    <label>Enter Marks for 5 Subjects:</label><br>
+    <?php for ($i=1;$i<=5;$i++) echo "Subject $i: <input type='number' name='m$i'><br>"; ?>
+    <input type="submit" name="marks" value="Calculate">
+  </form>
+  <?php
+    if (isset($_POST['marks'])) {
+      $total = 0;
+      for ($i=1;$i<=5;$i++) $total += $_POST["m$i"];
+      $percent = $total / 5;
+      echo "Total: $total<br>Percentage: $percent%";
+    }
+  ?>
+</div>
+
+<!-- Task 6: Gross Salary -->
+<div class="task">
+  <form method="post">
+    <label>Enter Basic Salary:</label>
+    <input type="number" name="salary">
+    <input type="submit" name="gross" value="Calculate Gross Salary">
+  </form>
+  <?php
+    if (isset($_POST['gross'])) {
+      $basic = $_POST['salary'];
+      if ($basic < 2000) { $hra = 0.10; $da = 0.15; }
+      elseif ($basic <= 5000) { $hra = 0.15; $da = 0.20; }
+      else { $hra = 0.20; $da = 0.25; }
+      $gross = $basic + ($hra * $basic) + ($da * $basic);
+      echo "Gross Salary: $gross";
+    }
+  ?>
+</div>
+
+<!-- Task 7: Grade Calculator -->
+<div class="task">
+  <form method="post">
+    <label>Enter Marks:</label>
+    <input type="number" name="grade_marks">
+    <input type="submit" name="grade" value="Check Grade">
+  </form>
+  <?php
+    if (isset($_POST['grade'])) {
+      $m = $_POST['grade_marks'];
+      if ($m >= 90) $g = "A+";
+      elseif ($m >= 80) $g = "A";
+      elseif ($m >= 70) $g = "B+";
+      elseif ($m >= 60) $g = "B";
+      elseif ($m >= 50) $g = "C";
+      else $g = "Fail";
+      echo "Grade: $g";
+    }
+  ?>
+</div>
+
+<!-- Task 8: Swap Values -->
+<div class="task">
+  <form method="post">
+    <label>Value 1:</label>
+    <input type="text" name="val1" value="<?php echo $_POST['val2'] ?? '' ?>">
+    <label>Value 2:</label>
+    <input type="text" name="val2" value="<?php echo $_POST['val1'] ?? '' ?>">
+    <input type="submit" name="swap" value="Swap">
+  </form>
+</div>
+
+<!-- Task 9: Change Background Color -->
+<div class="task">
+  <form method="post">
+    <label>Enter Color Name:</label>
+    <input type="text" name="color">
+    <input type="submit" name="changeColor" value="Change Background">
+  </form>
+</div>
+<?php
+  if (isset($_POST['changeColor'])) {
+    $color = $_POST['color'];
+    echo "<script>document.body.style.backgroundColor = '$color';</script>";
+  }
+?>
+
+</body>
+</html>
