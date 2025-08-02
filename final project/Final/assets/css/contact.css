@@ -1,0 +1,71 @@
+body {
+  background: #121212;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.contact-box {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.form-box h2, .info-box h2 {
+  color: #ff4da6;
+}
+
+.info-box p {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-box i {
+  color: #ff4da6;
+}
+
+.btn-custom {
+  background-color: #ff4da6;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+}
+
+.btn-custom:hover {
+  background-color: #ff2a92;
+}
+
+.location-title {
+  text-align: center;
+  margin: 30px 0 10px;
+  color: #ff4da6;
+}
+
+textarea, input.form-control {
+  background: #2b2b2b;
+  color: white;
+  border: 1px solid #444;
+}
+
+textarea:focus, input.form-control:focus {
+  border-color: #ff4da6;
+  box-shadow: none;
+}
+.navbar {
+  position: relative;
+  z-index: 9999; 
+}
+
+.dropdown-menu {
+  z-index: 99999; 
+}
+
+iframe {
+  position: relative;
+  z-index: 1; 
+}
+

@@ -1,0 +1,136 @@
+body {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+.cart-container {
+  background: #1e1e1e;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  margin-top: 40px;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.cart-table th {
+  background: #292929;
+  text-align: center;
+  padding: 12px;
+  font-weight: 600;
+  color: #ff4da6;
+}
+
+.cart-table td {
+  text-align: center;
+  vertical-align: middle;
+  background: #222;
+  padding: 14px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.cart-table img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.remove-btn {
+  color: #ff4d4d;
+  font-size: 22px;
+  transition: 0.2s;
+}
+
+.remove-btn:hover {
+  color: #ff0000;
+  transform: scale(1.2);
+}
+
+.total-box {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ff4da6;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: #ff4da6;
+  margin-top: 50px;
+}
+.footer-row {
+  margin-top: 200px;
+}
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.place-order-btn {
+  background: #ff4da6;
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.place-order-btn:hover {
+  background: #ff1f88;
+  transform: scale(1.05);
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .cart-table,
+  .cart-table thead,
+  .cart-table tbody,
+  .cart-table th,
+  .cart-table td,
+  .cart-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .cart-table thead {
+    display: none;
+  }
+
+  .cart-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 8px;
+    background: #222;
+  }
+
+  .cart-table td {
+    text-align: left;
+    padding: 8px 10px;
+    position: relative;
+  }
+
+  .cart-table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #ff4d88;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .cart-table td img {
+    max-width: 100px;
+    height: auto;
+  }
+}

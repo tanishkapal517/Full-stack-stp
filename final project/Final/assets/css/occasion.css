@@ -1,0 +1,20 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+}
+
+h1.section-title {
+  text-align: center;
+  color: #ff4da6;
+  margin: 30px 0;
+  font-weight: 600;
+}
+
+.thumbnail {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

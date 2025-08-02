@@ -1,0 +1,121 @@
+body{
+  background-image: url(../images/background2.jpg);
+}
+.wlcm {
+  font-family: cinzel decorative;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 210px;
+  font-size: 50px;
+}
+.wlcm-p {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  font-size: larger;
+}
+.bt {
+  padding: 5px 15px;
+  margin-top: 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.247);
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  color: rgb(209, 209, 209);
+  margin: 20px 5px;
+  margin-bottom: 210px;
+}
+.bt:hover {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.541);
+  color: white;
+  transform: scale(1.05);
+}
+.fil {
+  background-color: rgba(0, 0, 0, 0.541);
+  margin-top: 4px;
+}
+.card-sec {
+  margin-top: 15px;
+  color: white;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.527);
+}
+.cat {
+  font-family: cinzel decorative;
+}
+.birth-c {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.birth-c img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+.occ-car {
+  background-color: rgba(0, 0, 0, 0.144);
+  backdrop-filter: blur(10px);
+  margin: 0px 5px;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.349);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.726);
+  color: white;
+}
+
+.occ-car:hover {
+  transform: scale(1.02);
+  z-index: 10;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.slide img {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 300px;
+}
+.card-info {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.lists {
+  text-align: center;
+}
+.lists ul {
+  list-style: none;
+  padding: 0;
+}
+.lists li::before {
+  content: "• ";
+}
+.lists li {
+  margin-bottom: 5px;
+}
+.btn-oc {
+  margin-top: 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.247);
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  color: rgb(209, 209, 209);
+}
+.btn-oc:hover {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.541);
+  color: white;
+  transform: scale(1.05);
+}
